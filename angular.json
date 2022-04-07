@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "2dbfdf8a-17a7-4ba6-a51e-c033151cd720"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "advide-generator": {
+    "advice-generator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/advide-generator",
+            "outputPath": "dist/advice-generator",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "advide-generator:build:production"
+              "browserTarget": "advice-generator:build:production"
             },
             "development": {
-              "browserTarget": "advide-generator:build:development"
+              "browserTarget": "advice-generator:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "advide-generator:build"
+            "browserTarget": "advice-generator:build"
           }
         },
         "test": {
@@ -102,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "advide-generator"
+  "defaultProject": "advice-generator"
 }
