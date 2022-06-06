@@ -22,4 +22,12 @@ describe('CardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('should render title card', () => {
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.container__content--title span').textContent).toContain('ADVICE #');
+  });
+
 });
